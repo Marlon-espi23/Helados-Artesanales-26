@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esencia Cítrica: helados artesanales de frutas naturales en Masaya, Nicaragua.">
+  <title>Esencia Cítrica</title>
+  <link rel="icon" href="Imagenes/logo.png.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="brand">
+   <img src="Imagenes/logo.png.jpeg" alt="Logo Esencia Cítrica" class="logo-img">
+
+    <div class="brand-text">
+        <h2>Esencia Cítrica</h2>
+        <p>✨ Helados Artesanales ✨</p>
+    </div>
+</div>
+
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <nav id="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#promos">Promociones</a>
+    <a href="#galeria">Galería</a>
+    <a href="#mision-vision">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#pedido" class="nav-order">Pedidos</a>
+    <button id="darkModeBtn" class="dark-btn">🌙</button>
+    <button id="searchToggle" class="search-btn">🔍</button>
+    
+    <input type="text" id="buscadorProductos" placeholder="Buscar sabor...">
+</div>
+  </nav>
+  <div class="search-container" id="searchContainer"></div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-copy reveal">
+    <p class="eyebrow">Helados artesanales naturales</p>
+    <h1>Sabores que <br><span>te hacen feliz</span></h1>
+   <p class="lead">
+  Helados artesanales elaborados con frutas frescas y naturales.
+  Sin conservantes, sin prisas, solo sabor auténtico.
+</p>
+
+    <div class="hero-actions">
+      <a href="#pedido" class="btn primary">Ordenar ahora</a>
+      <a href="#productos" class="btn ghost">Ver productos</a>
+    </div>
+  </div>
+
+<div class="hero-visual reveal">
+<img src="Imagenes/hero.jpeg.png" alt="Helados Esencia Cítrica" class="hero-image">
+</div>
+</section>
+
+<div class="offer-strip reveal">
+  <span>OFERTA DE LANZAMIENTO</span>
+  <strong>2 helados artesanales por C$50</strong>
+  <button onclick="pedido('Promoción 2 helados por C$50')">Pedir promo</button>
+</div>
+
+<section class="section" id="productos">
+  <p class="eyebrow">Favoritos del mercado</p>
+  <h2>Productos destacados</h2>
+  <p class="subtitle">Sabores cítricos y tropicales con presentación moderna.</p>
+  <div class="search-box">
+</div>
+
+  <div class="product-grid">
+    <div class="product-card reveal">
+     <img src="Imagenes/limon.png (2).png">
+      <div class="product-body">
+        <h3>Limón</h3>
+        <p>Refrescante y cítrico, el clásico que nunca falla.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Limón')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/mango.jpg.png">
+      <div class="product-body">
+        <h3>Mango</h3>
+        <p>Suave, dulce y tropical, el favorito de muchos.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Mango')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/pina.png.png">
+      <div class="product-body">
+        <h3>Piña</h3>
+        <p>Dulce y jugoso, sabor lleno de frescura.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Piña')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/pitahaya.png.png">
+      <div class="product-body">
+        <h3>Pitahaya Premium</h3>
+        <p>Exótico, antioxidante y lleno de color natural.</p>
+        <div class="price"><strong>C$34.99</strong><button onclick="abrirModalPedido('Pitahaya')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+     <img src="Imagenes/naranja.png.png">
+      <div class="product-body">
+        <h3>Naranja</h3>
+        <p>Cítrico, dulce y lleno de vitamina C.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Naranja')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+     <img src="Imagenes/mandarina.png (2).png">
+      <div class="product-body">
+        <h3>Mandarina</h3>
+        <p>Suave, fresca y perfecta para cualquier momento.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Mandarina')">Pedir</button></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <img src="Imagenes/fresa.png (2).png">
+      <div class="product-body">
+        <h3>Fresa</h3>
+        <p>Clásico, dulce y siempre delicioso.</p>
+        <div class="price"><strong>C$29.99</strong><button onclick="abrirModalPedido('Fresa')">Pedir</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section beneficios" id="beneficios">
+  <p class="eyebrow">Por qué elegirnos</p>
+  <h2>Una opción natural y refrescante</h2>
+  <p class="subtitle">
+    Nuestro emprendimiento busca ofrecer helados artesanales con identidad, sabor y calidad.
+  </p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card reveal">
+      <span>🍊</span>
+      <h3>Frutas naturales</h3>
+      <p>Utilizamos sabores inspirados en frutas frescas y tropicales.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>🍦</span>
+      <h3>Elaboración artesanal</h3>
+      <p>Cada producto se prepara con cuidado para mantener un sabor auténtico.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>🌱</span>
+      <h3>Alternativa saludable</h3>
+      <p>Una propuesta refrescante para quienes buscan consumir algo más natural.</p>
+    </div>
+
+    <div class="benefit-card reveal">
+      <span>❤️</span>
+      <h3>Emprendimiento local</h3>
+      <p>Proyecto creado con visión juvenil, creatividad y enfoque universitario.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="promos">
+  <p class="eyebrow">Promociones</p>
+  <h2>Ofertas especiales</h2>
+  <p class="subtitle">Promos pensadas para estudiantes, familias y clientes frecuentes.</p>
+
+  <div class="promo-grid">
+
+    <div class="promo-card reveal">
+      <img src="Imagenes/promo-lanzamiento.jpg.png" alt="Promo lanzamiento">
+      <div class="promo-content">
+        <h4>Lanzamiento</h4>
+        <h3>2 helados por C$50</h3>
+        <p>Promoción especial para dar a conocer nuestros sabores artesanales.</p>
+        <strong>C$50</strong>
+        <button onclick="abrirModalPedido('Promoción 2 helados por C$50')">Pedir promo</button>
+      </div>
+    </div>
+
+    <div class="promo-card reveal">
+      <img src="Imagenes/promo-familia.jpg.png" alt="Combo familiar">
+      <div class="promo-content">
+        <h4>Familias</h4>
+        <h3>Combo Familiar</h3>
+        <p>Una opción ideal para compartir helados en casa o con amigos.</p>
+        <strong>C$130</strong>
+        <button onclick="abrirModalPedido('Combo Familiar')">Pedir promo</button>
+      </div>
+    </div>
+
+    <div class="promo-card reveal">
+      <img src="Imagenes/promo-estudiantes.jpg.png" alt="Promo estudiantes">
+      <div class="promo-content">
+        <h4>Estudiantes</h4>
+        <h3>10% descuento</h3>
+        <p>Promoción especial presentando carnet estudiantil.</p>
+        <strong>-10%</strong>
+        <button onclick="abrirModalPedido('Promoción estudiantes 10% descuento')">Pedir promo</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="como-comprar" id="comprar">
+  <div class="section-title">
+    <span>COMPRA FÁCIL ✨</span>
+    <h2>¿Cómo comprar?</h2>
+    <p>Realizar tu pedido es rápido, sencillo y seguro.</p>
+  </div>
+
+  <div class="steps-grid">
+
+    <div class="step-card">
+      <img src="Imagenes/selecciona-sabor.jpg.png" alt="Selecciona tu sabor">
+      <h3>1.Selecciona tu sabor</h3>
+      <p>Explora nuestro catálogo y elige tu helado favorito.</p>
+    </div>
+
+    <div class="step-card">
+      <img src="Imagenes/presentacion.jpg.png" alt="Elige la presentación">
+      <h3>2.Elige la presentación</h3>
+      <p>Servido aquí o para llevar.</p>
+    </div>
+
+    <div class="step-card">
+      <img src="Imagenes/confirmar-pedido.jpg.png" alt="Confirma tu pedido">
+      <h3>3.Confirma tu pedido</h3>
+      <p>Selecciona la opción que mejor se adapte a ti.</p>
+    </div>
+
+    <div class="step-card">
+      <img src="Imagenes/disfruta-helado.jpg.png" alt="Disfruta tu helado">
+      <h3>4.Disfruta tu helado</h3>
+      <p>Recíbelo y disfruta de nuestros sabores artesanales.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="pagos">
+
+  <p class="eyebrow">PAGOS</p>
+
+  <h2>Métodos de pago</h2>
+
+  <p class="subtitle">
+    Contamos con diferentes opciones para mayor comodidad.
+  </p>
+
+  <div class="pagos-grid">
+
+    <div class="pago-card">
+      <img src="Imagenes/pago-efectivo.jpg.png" alt="Pago en efectivo">
+      <h3>Efectivo</h3>
+      <p>Pago directo al recibir tu pedido.</p>
+    </div>
+
+    <div class="pago-card">
+      <img src="Imagenes/pago-transferencia.jpg.png" alt="Transferencia bancaria">
+      <h3>Transferencia</h3>
+      <p>Transferencias bancarias seguras.</p>
+    </div>
+
+    <div class="pago-card">
+      <img src="Imagenes/pago-movil.jpg.png" alt="Pago móvil">
+      <h3>Pago móvil</h3>
+      <p>Pagos rápidos desde tu teléfono.</p>
+    </div>
+
+    <div class="pago-card">
+      <img src="Imagenes/pago-tarjeta.jpg.png" alt="Pago con tarjeta">
+      <h3>Tarjeta</h3>
+      <p>Aceptamos tarjetas de crédito y débito.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="envios">
+  <p class="eyebrow">ENTREGAS</p>
+  <h2>Envíos y entregas</h2>
+  <p class="subtitle">Queremos que recibas tu helado fresco y en buen estado.</p>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <img src="Imagenes/zona-cobertura.jpg.png" alt="Zona de cobertura">
+      <h3>Zona de cobertura</h3>
+      <p>Pedidos disponibles en Masaya y zonas cercanas.</p>
+    </div>
+
+    <div class="info-card">
+      <img src="Imagenes/delivery.jpg.png" alt="Delivery">
+      <h3>Delivery</h3>
+      <p>Entregas rápidas según disponibilidad y ubicación.</p>
+    </div>
+
+    <div class="info-card">
+      <img src="Imagenes/para-llevar.jpg.png" alt="Para llevar">
+      <h3>Para llevar</h3>
+      <p>Presentaciones listas para transportar con tapa segura.</p>
+    </div>
+
+    <div class="info-card">
+      <img src="Imagenes/horario.jpg.png" alt="Horario">
+      <h3>Horario</h3>
+      <p>Lunes a sábado de 9:00 AM a 6:00 PM.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="testimonios">
+  <p class="eyebrow">CLIENTES</p>
+  <h2>Testimonios</h2>
+  <p class="subtitle">Opiniones que reflejan la experiencia Esencia Cítrica.</p>
+
+  <div class="testimonios-grid">
+
+    <div class="testimonio-card">
+      <img src="Imagenes/cliente1.jpg.png" alt="María G.">
+      <p>“El helado de fresa tiene un sabor natural, fresco y delicioso.”</p>
+      <div class="stars">★★★★★</div>
+      <h4>María G.</h4>
+    </div>
+
+    <div class="testimonio-card">
+      <img src="Imagenes/cliente2.jpg.png" alt="Carlos M.">
+      <p>“Me gustó mucho la presentación y la atención fue rápida.”</p>
+      <div class="stars">★★★★★</div>
+      <h4>Carlos M.</h4>
+    </div>
+
+    <div class="testimonio-card">
+      <img src="Imagenes/cliente3.jpg.png" alt="Ana P.">
+      <p>“El helado de pitahaya es diferente, natural y muy refrescante.”</p>
+      <div class="stars">★★★★★</div>
+      <h4>Ana P.</h4>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section" id="galeria">
+
+    <p class="eyebrow">GALERÍA</p>
+
+    <h2>Nuestros momentos favoritos</h2>
+
+    <p class="subtitle">
+        Descubre la experiencia Esencia Cítrica a través de nuestros productos,
+        ingredientes naturales y momentos compartidos.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img src="Imagenes/galeria1.jpg.png" alt="Helados artesanales">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria2.jpg.png" alt="Frutas naturales">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria3.jpg.png" alt="Preparación artesanal">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria4.jpg.png" alt="Presentación premium">
+        </div>
+
+        <div class="gallery-item">
+            <img src="Imagenes/galeria5.jpg.png" alt="Clientes disfrutando">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="mision-vision">
+
+    <p class="eyebrow">NUESTRA IDENTIDAD</p>
+
+    <h2>Misión y Visión</h2>
+
+    <div class="mv-grid">
+
+        <div class="mv-card">
+            <h3>🎯 Misión</h3>
+            <p>
+                Elaborar helados artesanales de alta calidad utilizando frutas
+                naturales e ingredientes frescos, ofreciendo una experiencia
+                saludable, deliciosa y accesible que satisfaga las preferencias
+                de nuestros clientes.
+            </p>
+        </div>
+
+        <div class="mv-card">
+            <h3>🚀 Visión</h3>
+            <p>
+                Consolidarnos como una marca reconocida en el mercado local por
+                la calidad de nuestros productos artesanales, la innovación en
+                sabores y el compromiso con la satisfacción de nuestros clientes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="faq">
+  <p class="eyebrow">DUDAS FRECUENTES</p>
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq-grid">
+    <div class="faq-card">
+      <h3>¿Hacen delivery?</h3>
+      <p>Sí, contamos con entregas en Masaya y zonas cercanas según disponibilidad.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>¿Puedo pedir para llevar?</h3>
+      <p>Sí, ofrecemos presentaciones con tapa para transportar el producto fácilmente.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>¿Qué métodos de pago aceptan?</h3>
+      <p>Aceptamos efectivo, transferencia y pago móvil. Tarjeta próximamente.</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>¿Los helados son naturales?</h3>
+      <p>Sí, están inspirados en frutas naturales y sabores frescos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="politicas">
+  <p class="eyebrow">CONFIANZA</p>
+  <h2>Políticas básicas</h2>
+  <p class="subtitle">
+    Queremos brindar una experiencia clara, segura y confiable para nuestros clientes.
+  </p>
+
+  <div class="politicas-grid">
+    <div class="politica-card">
+      <span>🔒</span>
+      <h3>Privacidad</h3>
+      <p>La información del cliente será utilizada únicamente para gestionar pedidos y atención.</p>
+    </div>
+
+    <div class="politica-card">
+      <span>♻️</span>
+      <h3>Cambios</h3>
+      <p>Los cambios aplican si el producto presenta un problema comprobable al momento de la entrega.</p>
+    </div>
+
+    <div class="politica-card">
+      <span>🧾</span>
+      <h3>Pedidos</h3>
+      <p>Todo pedido debe confirmarse por WhatsApp antes de su preparación o entrega.</p>
+    </div>
+
+    <div class="politica-card">
+      <span>🚚</span>
+      <h3>Entregas</h3>
+      <p>El tiempo de entrega puede variar según la ubicación, clima y disponibilidad del producto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta reveal" id="pedido">
+  <h2>Tu próxima pausa puede saber a fruta natural.</h2>
+  <button onclick="pedido('Combo Cítrico')">Pedir por WhatsApp</button>
+</section>
+
+<footer id="contacto" class="footer-modern">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="Imagenes/logo.png.jpeg" alt="Logo Esencia Cítrica">
+      <h3>Esencia Cítrica</h3>
+      <p>Helados artesanales de frutas naturales en Masaya, Nicaragua.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Menú</h4>
+      <a href="#inicio">🏠 Inicio</a>
+      <a href="#productos">🍦 Productos</a>
+      <a href="#promos">🎁 Promociones</a>
+      <a href="#comprar">🛒 Cómo comprar</a>
+      <a href="#faq">❓ Preguntas frecuentes</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Atención</h4>
+      <a href="#pagos">💳 Métodos de pago</a>
+      <a href="#envios">🚚 Envíos y entregas</a>
+      <a href="#politicas">🔒 Políticas básicas</a>
+      <a href="#mision-vision">🎯 Misión y visión</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📍 Masaya, Nicaragua</p>
+      <p>📞 +505 5781-7630</p>
+      <p>🕘 Lunes a sábado: 9:00 AM - 6:00 PM</p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/50557817630" target="_blank">WA</a>
+        <a href="https://www.facebook.com/share/1bv58AqC1x/" target="_blank">f</a>
+        <a href="https://www.instagram.com/esencia_citrica2026?igsh=bjVjZnJreHg2c2Q5" target="_blank">IG</a>
+        <a href="https://www.tiktok.com/@esencia.ctrica?_r=1&_t=ZS-974QkOAVmsP" target="_blank">♪</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Esencia Cítrica. Proyecto universitario.</p>
+  </div>
+</footer>
+  
+  <div class="social-floating">
+  <a href="https://www.facebook.com/share/1bv58AqC1x/" class="fb" target="_blank">f</a>
+  <a href="https://www.instagram.com/esencia_citrica2026?igsh=bjVjZnJreHg2c2Q5" class="ig" target="_blank">IG</a>
+  <a href="https://www.tiktok.com/@esencia.ctrica?_r=1&_t=ZS-974QkOAVmsP" class="tk" target="_blank">♪</a>
+  <a href="#inicio" class="up">↑</a>
+  <a href="#" class="wa" onclick="whatsappGeneral()">WA</a>
+</div>
+
+  <hr>
+</footer>
+
+<div id="pedidoModal" class="modal-pedido">
+  <div class="modal-content">
+    <button class="cerrar-modal" onclick="cerrarModal()">×</button>
+
+    <h2>¿Cómo quieres tu pedido?</h2>
+    <p id="productoSeleccionado"></p>
+
+    <div class="modal-botones">
+      <button onclick="servidoAqui()">🍦 Servido aquí</button>
+      <button onclick="mostrarParaLlevar()">🛍️ Para llevar</button>
+    </div>
+
+    <div id="opcionesLlevar" class="opciones-llevar">
+      <h3>Selecciona tu presentación para llevar</h3>
+
+      <div class="llevar-grid">
+        <div class="llevar-card">
+          <img src="Imagenes/limon.png.png" alt="Limón para llevar">
+          <h4>Limón</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Limón')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/mango.png.png" alt="Mango para llevar">
+          <h4>Mango</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Mango')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/pina.png (2).png" alt="Piña para llevar">
+          <h4>Piña</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Piña')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/pitahaya.png (2).png" alt="Pitahaya para llevar">
+          <h4>Pitahaya</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Pitahaya')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/naranja.png (2).png" alt="Naranja para llevar">
+          <h4>Naranja</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Naranja')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/mandarina.png.png" alt="Mandarina para llevar">
+          <h4>Mandarina</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Mandarina')">Pedir orden</button>
+        </div>
+
+        <div class="llevar-card">
+          <img src="Imagenes/fresa.png.png" alt="Fresa para llevar">
+          <h4>Fresa</h4>
+          <p>120 ml</p>
+          <button onclick="seleccionarSabor('Fresa')">Pedir orden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
