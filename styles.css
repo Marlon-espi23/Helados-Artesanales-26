@@ -2341,3 +2341,49 @@ button:hover,
   }
 
 }
+
+@media (max-width: 768px){
+
+  .steps-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:25px !important;
+    padding:0 18px;
+  }
+
+  .step-card{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  .step-card img{
+    width:100% !important;
+    height:260px !important;
+    object-fit:cover !important;
+  }
+
+  .step-card h3{
+    font-size:26px !important;
+  }
+
+  .como-comprar{
+    padding:45px 0 !important;
+    overflow:hidden;
+  }
+
+  .section-title{
+    padding:0 18px;
+  }
+
+  .social-floating{
+    right:8px !important;
+    gap:8px !important;
+  }
+
+  .social-floating a{
+    width:44px !important;
+    height:44px !important;
+    font-size:16px !important;
+  }
+}
