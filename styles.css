@@ -2271,3 +2271,73 @@ button:hover,
 }
 
 
+@media (max-width: 768px){
+
+  .pasos-grid{
+      grid-template-columns:1fr !important;
+      gap:25px;
+  }
+
+  .paso-card{
+      width:100%;
+      max-width:100%;
+  }
+
+  .paso-card img{
+      width:100%;
+      height:auto;
+      object-fit:cover;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .promo-grid{
+      grid-template-columns:1fr !important;
+      gap:25px;
+  }
+
+  .promo-card{
+      width:100%;
+      max-width:100%;
+  }
+
+  .promo-card img{
+      width:100%;
+      height:auto;
+      display:block;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .social-floating{
+      right:10px;
+      gap:12px;
+  }
+
+  .social-floating a{
+      width:55px;
+      height:55px;
+      font-size:20px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .logo img{
+      width:70px;
+  }
+
+  .logo-text h1{
+      font-size:18px;
+  }
+
+  .logo-text p{
+      font-size:12px;
+  }
+
+}
